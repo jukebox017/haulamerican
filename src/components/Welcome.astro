@@ -4,65 +4,119 @@ import haLogo from '../assets/logo.png';
 
 <div id="container">
 	<banner>
-		<a href="https://haulamerican.us"
-			><img src={haLogo.src} width="300px" alt="Haul American Homepage" /></a
-		>
+		<section id="logo">
+			<a href="https://haulamerican.us"
+				><img src={haLogo.src} width="250px" alt="Haul American Homepage" /></a
+			>
+		</section>
+		<section id="contact-phone">
+		  <a href="tel:5551234567">555-123-4567</a>
+		</section>
 	</banner>
+	<section id="hero">
+  	<h1 id="tag">We haul it all! Now servicing El Paso County and Teller County</h1>
+	</section>
 	<main>
-		<section id="hero">
-			<h1 id="tag">No-frills junk removal in Colorado Springs</h1>
-
-			<!--
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-			 -->
+		<section id="services">
+			<h2>Services</h2>
+			<div>
+			  <p>Full-service hauling</p>
+				<p>Trash mitigation</p>
+				<p>Demolition</p>
+				<p>Construction debris</p>
+				<p>Home cleanups</p>
+				<p>Jobsite management</p>
+			</div>
 		</section>
 	</main>
+	<footer>
+		© 2026 Haul American
+	</footer>
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
+	banner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 20px 50px 0 50px;
+	}
+
+	@media screen and (width <= 586px) {
+		banner {
+			align-items: center;
+			flex-direction: column;
+
+			#logo {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	@media screen and (width <= 1165px) {
+		#tag {
+			font-size: initial !important;
+			text-align: center;
+		}
+	}
+
+	#contact-phone {
+		display: flex;
+		align-items: center;
+
+		a {
+			color: #163c91;
+			font-size: 40px;
+			font-weight: bold;
+			text-decoration: none;
+		}
 	}
 
 	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		/* font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif; */
+		font-family: 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
 	}
 
 	main {
-		height: 100%;
+		max-width: 1200px;
+		/* height: 100%; */
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background: #163c91;
+		color: white;
+		padding: 15px 0;
 	}
 
 	#hero {
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		height: 57px;
-		padding: 16px;
-		background: #163c91;
+		height: 100px;
+		/* background: #163c91; */
+		background: #f95e3a;
+		align-items: center;
 	}
 
 	#tag {
+		margin: 0;
 		font-size: 40px;
 		color: white;
+	}
+
+	#services {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	h1 {
@@ -120,28 +174,16 @@ import haLogo from '../assets/logo.png';
 	}
 
 	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
 		color: #111827;
 		font-size: 20px;
 	}
 
 	p {
-		color: #4b5563;
+		/* color: #4b5563; */
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.006em;
 		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
 	}
 
 	.box {
@@ -149,20 +191,6 @@ import haLogo from '../assets/logo.png';
 		background: rgba(255, 255, 255, 1);
 		border-radius: 16px;
 		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
 	}
 
 	@media screen and (max-height: 368px) {
