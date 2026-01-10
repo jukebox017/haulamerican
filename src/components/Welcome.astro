@@ -65,12 +65,12 @@ import haLogo from '../assets/logo.png';
 				</p>
 			</div>
 		</section>
-		<section>
-			<h2>
+		<section style="text-align: center;">
+			<h1>
 				Ready to clear space, clean up that construction site, or stock up on hay? Contact us
         today for a no cost and no-obligation quote … call, text, or book online. We make it
         simple, stress-free, and neighborly!
-			</h2>
+			</h1>
 		</section>
 	</main>
 	<footer>
@@ -97,13 +97,23 @@ import haLogo from '../assets/logo.png';
 			}
 		}
 
-		.section-description {
-			text-align: initial !important;
-			margin: 0 20px !important;
+		section {
+			min-height: initial;
+			margin: unset !important;
+			padding: 0 20px;
+			text-align: unset !important;
+
+			.section-container {
+				margin: unset !important;
+			}
 		}
 	}
 
-	@media screen and (width <= 1165px) {
+	@media screen and (width <= 1201px) {
+    #hero {
+			width: unset !important;
+		}
+
 		#tag {
 			font-size: initial !important;
 			text-align: center;
@@ -134,6 +144,7 @@ import haLogo from '../assets/logo.png';
 
 		section {
 			min-height: 220px;
+			padding-bottom: 30px;
 
 			.section-container {
 				margin-top: 40px;
