@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import haLogo from '../assets/logo.png';
 ---
 
@@ -6,7 +7,7 @@ import haLogo from '../assets/logo.png';
 	<banner>
 		<section id="logo">
 			<a href="https://haulamerican.us"
-				><img src={haLogo.src} width="250px" alt="Haul American Homepage" /></a
+				><Image src={haLogo} width="250" alt="Haul American Homepage" /></a
 			>
 		</section>
 		<section id="contact-phone">
