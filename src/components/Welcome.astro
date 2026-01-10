@@ -86,6 +86,15 @@ import haLogo from '../assets/logo.png';
 		padding: 20px 50px 0 50px;
 	}
 
+  /* Large screens */
+	@media screen and (width >= 1500px) {
+		.section-container {
+			max-width: 1500px !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
 	/* Mobile */
 	@media screen and (width <= 586px) {
 		banner {
@@ -109,6 +118,7 @@ import haLogo from '../assets/logo.png';
 		}
 	}
 
+	/* Header for smaller screens */
 	@media screen and (width <= 1201px) {
     #hero {
 			width: unset !important;
