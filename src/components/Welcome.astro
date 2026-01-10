@@ -10,23 +10,67 @@ import haLogo from '../assets/logo.png';
 			>
 		</section>
 		<section id="contact-phone">
-		  <a href="tel:5551234567">555-123-4567</a>
+		  <a href="tel:7192662620">719.266.2620</a>
 		</section>
 	</banner>
 	<section id="hero">
   	<h1 id="tag">We haul it all! Now servicing El Paso County and Teller County</h1>
 	</section>
 	<main>
-		<section id="services">
-			<h2>Services</h2>
-			<div>
-			  <p>Full-service hauling</p>
-				<p>Trash mitigation</p>
-				<p>Demolition</p>
-				<p>Construction debris</p>
-				<p>Home cleanups</p>
-				<p>Jobsite management</p>
+		<section id="about">
+			<div class="section-container">
+				<h1></h1>
+				<p class="section-description">
+					<span style="font-size:300%; display: inline;">Haul American</span> provides reliable, full-service hauling solutions tailored to the needs of
+					homeowners, horse owners, hobby farmers, ranchers, and businesses throughout
+					Colorado Springs, El Paso County, Teller County, and the surrounding Pikes Peak
+					region, including Black Forest, Monument, Woodland Park, Falcon, Peyton, and more.
+					We specialize in two core services designed for convenience, affordability, and minimal
+					hassle.
+				</p>
 			</div>
+		</section>
+		<section>
+			<div class="section-container">
+				<h1>Small-Load Hay Delivery & Stacking</h1>
+				<p class="section-description">
+					Whether you're a backyard horse owner, hobby farm enthusiast, or managing a small
+					ranch, we make getting quality hay easy. We deliver and neatly stack small to medium
+					loads of premium alfalfa, timothy, orchard grass, mixed, or grass hay directly to your
+					barn, stable, or storage area. We pride ourselves on no minimums, which is perfect for
+					1–99+ bales that larger feed outlets won’t service. Our experienced team handles
+					unloading and careful stacking to save your back and time … ideal for rural properties,
+					tight access spots, or anyone without a truck and trailer. Or perhaps you do haul your
+					own hay, but life has gotten in the way again and you just need someone to help in a
+					pinch! Flexible scheduling, including weekends and emergency options when available.
+				</p>
+			</div>
+		</section>
+		<section>
+			<div class="section-container">
+				<h1>Full-Service Junk & Debris Removal</h1>
+				<p class="section-description">
+					Sit back while we handle the heavy lifting. Our professional crew removes unwanted
+					items from your home, garage, estate, or commercial property … including furniture,
+					appliances, mattresses, electronics, hot tubs, yard waste (branches, brush, green
+					waste), construction/demolition debris, and more. We offer everything from single-item
+					pickups and same-day service to complete garage/estate cleanouts,
+					foreclosure/eviction cleanouts, and renovation trash hauling. We prioritize eco-friendly
+					practices: donating usable items, recycling where possible, and responsible disposal to
+					keep our community cleaner. As a locally owned, family-focused business, we pride
+					ourselves on transparent upfront pricing (free quotes via our website pricing tool or on-
+					site), licensed & insured operations, courteous uniformed crews, and no hidden fees.
+					We respect your property, leave everything tidy, and work around your schedule —
+					including tight driveways, dirt roads, and mountain access.
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>
+				Ready to clear space, clean up that construction site, or stock up on hay? Contact us
+        today for a no cost and no-obligation quote … call, text, or book online. We make it
+        simple, stress-free, and neighborly!
+			</h2>
 		</section>
 	</main>
 	<footer>
@@ -42,6 +86,7 @@ import haLogo from '../assets/logo.png';
 		padding: 20px 50px 0 50px;
 	}
 
+	/* Mobile */
 	@media screen and (width <= 586px) {
 		banner {
 			align-items: center;
@@ -50,6 +95,11 @@ import haLogo from '../assets/logo.png';
 			#logo {
 				margin-bottom: 15px;
 			}
+		}
+
+		.section-description {
+			text-align: initial !important;
+			margin: 0 20px !important;
 		}
 	}
 
@@ -79,12 +129,49 @@ import haLogo from '../assets/logo.png';
 	}
 
 	main {
-		max-width: 1200px;
-		/* height: 100%; */
 		display: flex;
 		flex-direction: column;
-		margin-left: auto;
-		margin-right: auto;
+
+		section {
+			min-height: 220px;
+
+			.section-container {
+				margin-top: 40px;
+			}
+
+			.section-description {
+				max-width: 800px;
+			}
+
+			h1 {
+			  margin-top: 20px;
+			}
+		}
+
+		section:nth-child(odd) {
+			background: #163c91;
+		  color: #fafafa;
+
+			.section-container {
+				margin-left: 40px;
+			}
+
+			.section-description {
+  	    margin-right: auto;
+	    }
+		}
+
+		section:nth-child(even) {
+		  text-align: right;
+
+			.section-container {
+				margin-right: 40px;
+			}
+
+			.section-description {
+  	    margin-left: auto;
+	    }
+		}
 	}
 
 	footer {
@@ -102,7 +189,6 @@ import haLogo from '../assets/logo.png';
 		justify-content: center;
 		width: 100%;
 		height: 100px;
-		/* background: #163c91; */
 		background: #f95e3a;
 		align-items: center;
 	}
@@ -113,64 +199,9 @@ import haLogo from '../assets/logo.png';
 		color: white;
 	}
 
-	#services {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
 	h1 {
 		font-size: 22px;
 		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
 	}
 
 	h2 {
@@ -184,49 +215,5 @@ import haLogo from '../assets/logo.png';
 		line-height: 24px;
 		letter-spacing: -0.006em;
 		margin: 0;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
 	}
 </style>
