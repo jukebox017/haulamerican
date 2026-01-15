@@ -21,15 +21,14 @@ import haLogo from '../assets/logo.png';
 	<main>
 		<section id="about">
 			<div class="section-container">
-				<h1></h1>
-				<p class="section-description">
-					<span style="font-size:300%; display: inline;">Haul American</span> provides reliable, full-service hauling solutions tailored to the needs of
-					homeowners, horse owners, hobby farmers, ranchers, and businesses throughout
-					Colorado Springs, El Paso County, Teller County, and the surrounding Pikes Peak
-					region, including Black Forest, Monument, Woodland Park, Falcon, Peyton, and more.
-					We specialize in two core services designed for convenience, affordability, and minimal
-					hassle.
-				</p>
+				<div id="company-description">
+				  <h1 id="inline-name">Haul American</h1>	provides reliable, full-service hauling solutions tailored to the needs of
+					  homeowners, horse owners, hobby farmers, ranchers, and businesses throughout
+					  Colorado Springs, El Paso County, Teller County, and the surrounding Pikes Peak
+					  region, including Black Forest, Monument, Woodland Park, Falcon, Peyton, and more.
+					  We specialize in two core services designed for convenience, affordability, and minimal
+					  hassle.
+				</div>
 			</div>
 		</section>
 		<section id="second-section">
@@ -133,6 +132,10 @@ import haLogo from '../assets/logo.png';
 		#tag {
 			font-size: initial !important;
 		}
+
+		#inline-name {
+			margin-top: 38px !important;
+		}
 	}
 
 	#contact-phone {
@@ -231,6 +234,19 @@ import haLogo from '../assets/logo.png';
 		margin: 0;
 		font-size: 40px;
 		color: white;
+	}
+
+	#company-description {
+		max-width: 800px;
+		line-height: 24px;
+	}
+
+  #inline-name {
+		display: inline-block;
+		margin: 0;
+		font-size: 280%;
+		font-weight: normal;
+		line-height: 24px;
 	}
 
 	h1 {
