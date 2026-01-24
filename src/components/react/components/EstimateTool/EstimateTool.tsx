@@ -20,6 +20,10 @@ export default function EstimateTool(props) {
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>First Name</label>
       <input {...register("firstName")} />
+
+      <label>Last Name</label>
+      <input {...register("lastName")} />
+
       <input type="submit" value="Submit" />
     </form>
   )
