@@ -1,0 +1,35 @@
+#estimate-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right: 100px;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      height: 40px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 0 12px;
+
+      &[type=radio] {
+        height: initial;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #estimate {
+    text-align: center;
+  }
+}
