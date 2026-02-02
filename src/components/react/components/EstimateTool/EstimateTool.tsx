@@ -15,7 +15,7 @@ interface Inputs {
   lastName: string;
   email: string;
   phone: string;
-  communicationConsent: boolean;
+  contactConsent: boolean;
 }
 
 export default function EstimateTool() {
@@ -27,8 +27,8 @@ export default function EstimateTool() {
     watch
   } = useForm<Inputs>();
 
-  const zipCodeWatch = watch("zipCode");
-  console.log(zipCodeWatch);
+  const zipCode = watch("zipCode");
+  const contactConsent = watch("contactConsent");
 
   const [fiveOrLess, setFiveOrLess] = useState('');
   const updateFiveOrLess = (fiveOrLess: string) => {
@@ -140,7 +140,7 @@ export default function EstimateTool() {
           type="text"
           {...register("zipCode", { required: true })} />
 
-        { zipCodeWatch && zipCodeWatch.length >= 5 && !allowedZips.includes(zipCodeWatch) && (
+        { zipCode && zipCode.length >= 5 && !allowedZips.includes(zipCode) && (
           <h3 style={{ color: "red" }}>Unfortunately, we are not servicing this zip code at this time.</h3>
         )}
 
@@ -222,7 +222,7 @@ export default function EstimateTool() {
           </div>
 
           <div className="contact-consent">
-            <input type="checkbox" {...register("communicationConsent")} />
+            <input type="checkbox" {...register("contactConsent")} />
             <label>I consent to being contacted for service by Haul American.</label>
           </div>
         </>
@@ -234,15 +234,9 @@ export default function EstimateTool() {
           <h2>Your Estimate:</h2>
           <h1>${estimate}</h1>
 
-          { /*
-          <input
-            type="submit"
-            value="Submit your estimate!"
-            onClick={() => console.log('hey')}
-          />
-          */ }
-
-          <a href={`mailto:garrett@haulamerican.us?subject=New Estimate by Haul American&body=I've created a new estimate at haulamerican.us. Here is the information I've provided: %0D%0A
+          { contactConsent && (
+          <a
+            href={`mailto:garrett@haulamerican.us?subject=New Estimate by Haul American&body=I've created a new estimate at haulamerican.us. Here is the information I've provided: %0D%0A%0D%0A
             Zip: ${getValues('zipCode')} %0D%0A
             First Name: ${getValues('firstName')} %0D%0A
             Last Name: ${getValues('lastName')} %0D%0A
@@ -251,6 +245,7 @@ export default function EstimateTool() {
             Services: ${serviceTypesToString()} %0D%0A
             Estimated Total: $${estimate} `}>Submit Your Estimate!
           </a>
+          )}
         </div>
       )}
     </div>

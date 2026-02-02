@@ -31,6 +31,10 @@
   #estimate {
     text-align: center;
     align-content: center;
+
+    a {
+      font-size: 150%;
+    }
   }
 
   .general-button {
@@ -116,9 +120,13 @@
   }
 
   .contact-consent {
+    margin-top: 40px;
+
     input {
+      margin-right: 5px;
       height: unset;
     }
+
     font-weight: bolder;
   }
 }
