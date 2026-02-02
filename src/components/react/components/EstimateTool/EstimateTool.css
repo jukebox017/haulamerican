@@ -6,6 +6,11 @@
   margin-right: auto;
   margin-bottom: 40px;
 
+  /* Mobile */
+  @media screen and (width <= 740px) {
+    width: 100%;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -25,6 +30,12 @@
         height: initial;
         margin-bottom: 0;
       }
+    }
+
+    /* Mobile */
+    @media screen and (width <= 740px) {
+      width: 100%;
+
     }
   }
 
@@ -64,10 +75,20 @@
     button {
       width: 360px;
     }
+
+    @media screen and (width <= 740px) {
+      display: flex;
+      flex-direction: column;
+      grid: unset;
+
+      button {
+        align-self: center;
+        margin: 10px 0;
+      }
+    }
   }
 
   .service-types-instructions {
-    color: #888;
     text-align: center;
   }
 
@@ -75,6 +96,14 @@
     display: grid;
     grid: auto-flow / 360px 1fr;
     grid-gap: 10px;
+
+    /* Mobile */
+    @media screen and (width <= 740px) {
+      display: flex;
+      flex-direction: column;
+      grid: unset;
+      text-align: center;
+    }
   }
 
   .service-type {
