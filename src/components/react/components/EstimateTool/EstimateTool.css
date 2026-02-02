@@ -1,6 +1,6 @@
 #estimate-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -9,8 +9,7 @@
   form {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin-right: 100px;
+    width: 730px;
 
     label {
       margin-bottom: 5px;
@@ -31,40 +30,64 @@
 
   #estimate {
     text-align: center;
+    align-content: center;
+  }
+
+  .general-button {
+    cursor: pointer;
+    border-radius: 15px;
+    border: 3px solid #163c91;
+    color: #163c91;
+    padding: 10px;
+    width: 360px;
+    height: 190px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+
+    &.selected {
+      border-color: white;
+      background: #163c91;
+      color: white;
+    }
+  }
+
+  .fiveOrLess {
+    display: grid;
+    grid: auto-flow / 375px 205px 2fr;
+    margin: 30px 0;
+
+    button {
+      width: 360px;
+    }
+  }
+
+  .service-types-instructions {
+    color: #888;
+    text-align: center;
   }
 
   .service-types {
     display: grid;
-    grid: auto-flow / 133px 133px 2fr;
+    grid: auto-flow / 360px 1fr;
     grid-gap: 10px;
   }
 
   .service-type {
-    .service-button {
-      cursor: pointer;
-      border-radius: 15px;
-      border: 3px solid #163c91;
-      color: #163c91;
-      padding: 10px;
-      width: 120px;
-      height: 120px;
-      text-align: center;
-      font-size: larger;
-      font-weight: bold;
-
-      &.selected {
-        border-color: white;
-        background: #163c91;
-        color: white;
-      }
-    }
-
-    svg {
+    img {
       fill: rgb(22, 60, 145);
       margin-top: 5px;
     }
 
-    .amount-controls {
+    .title {
+      vertical-align: super;
+    }
+
+    .description {
+      font-weight: initial;
+    }
+
+    .quantity-controls {
       display: flex;
       justify-content: space-around;
       background: #163c91;
@@ -83,5 +106,12 @@
         cursor: pointer;;
       }
     }
+  }
+
+  .contact-consent {
+    input {
+      height: unset;
+    }
+    font-weight: bolder;
   }
 }
