@@ -88,7 +88,6 @@ export default function EstimateTool() {
     const updatedServiceTypes = serviceTypes.map((serviceType) => {
       if (serviceType.id === id) {
         if (serviceType?.max && serviceType.quantity > serviceType.max) newQuantity = serviceType.max;
-        if (newQuantity > 5) newQuantity = 5;
         serviceType.quantity = newQuantity;
       }
 
