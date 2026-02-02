@@ -75,8 +75,11 @@
 
   .service-type {
     img {
-      fill: rgb(22, 60, 145);
       margin-top: 5px;
+
+      &.selected {
+        filter: invert();
+      }
     }
 
     .title {
@@ -104,6 +107,10 @@
         color: inherit;
         border: none;
         cursor: pointer;;
+
+        &.disabled {
+          color: #777;
+        }
       }
     }
   }
