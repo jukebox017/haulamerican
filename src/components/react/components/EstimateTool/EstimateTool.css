@@ -64,6 +64,11 @@
       background: #163c91;
       color: white;
     }
+
+    /* Mobile */
+    @media screen and (width <= 740px) {
+      width: 260px;
+    }
   }
 
   .fiveOrLess {
