@@ -105,7 +105,7 @@ const serviceTypes: serviceType[] = [
   },
   {
     category: "per-item",
-    description: "Examples include refridgerators",
+    description: "Examples include refrigerators",
     id: "large-appliance",
     price: 115,
     quantity: 0,
@@ -113,7 +113,47 @@ const serviceTypes: serviceType[] = [
     svgString: '<svg xmlns="http://www.w3.org/2000/svg" width="45" viewBox="0 0 25 25"><g id="kitchen_2" data-name="kitchen 2"><path d="M23.5 23H23V4.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5V13H8.83a1.63 1.63 0 0 0 .17-.73V11h.5a.5.5 0 0 0 0-1H8.31L9 8.72a.5.5 0 0 0-.9-.44L7.19 10H3.5a.5.5 0 0 0 0 1H4v1.27a1.63 1.63 0 0 0 .17.73H2.5a.5.5 0 0 0-.5.5V23h-.5a.5.5 0 0 0 0 1h22a.5.5 0 0 0 0-1zM22 5v6h-8V5zM5 12.27V11h3v1.27a.73.73 0 0 1-.73.73H5.73a.73.73 0 0 1-.73-.73zM3 14h10v9H3zm11 9V12h8v11z"/><path class="cls-1" d="M15.5 13a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-.5-.5zM15.5 16a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5zM15.5 9a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-1 0v1a.5.5 0 0 0 .5.5zM11.5 17h-7a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5zm-.5 4H5v-3h6zM4.52 16a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5zM6.52 16a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5zM8.52 16a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5z"/></g></svg>',
     svgUrl: '',
     title: "Large Appliance",
-  }
+  },
+  {
+    category: "per-item",
+    id: "loveseat",
+    price: 50,
+    quantity: 0,
+    selected: false,
+    svgString: '<svg xmlns="http://www.w3.org/2000/svg" height="75" viewBox="0 0 25 25"><g id="sofa_2" data-name="sofa 2"><path class="cls-1" d="M23 10.51V8.9A3.91 3.91 0 0 0 19.1 5h-3.2a3.89 3.89 0 0 0-3.4 2 3.89 3.89 0 0 0-3.4-2H5.9A3.91 3.91 0 0 0 2 8.9v1.61a2.51 2.51 0 0 0-1 2v4.21A1.29 1.29 0 0 0 2.29 18h20.42A1.29 1.29 0 0 0 24 16.71V12.5a2.51 2.51 0 0 0-1-1.99zM15.9 6h3.2A2.9 2.9 0 0 1 22 8.9v1.15a2.73 2.73 0 0 0-.5-.05 2.5 2.5 0 0 0-2.5 2.5V14h-2.28A2 2 0 0 0 15 11h-2V8.9A2.9 2.9 0 0 1 15.9 6zM6 15h13v2H6zm3-2a1 1 0 0 1 1-1h2.33a.38.38 0 0 0 .34 0H15a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1zM3 8.9A2.9 2.9 0 0 1 5.9 6h3.2A2.9 2.9 0 0 1 12 8.9V11h-2a2 2 0 0 0-1.72 3H6v-1.5A2.5 2.5 0 0 0 3.5 10a2.73 2.73 0 0 0-.5.05zm-1 7.81V12.5a1.5 1.5 0 0 1 3 0V17H2.29a.29.29 0 0 1-.29-.29zm21 0a.29.29 0 0 1-.29.29H20v-4.5a1.5 1.5 0 0 1 3 0z"/><path class="cls-1" d="M5.52 9a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5zM9.52 9a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5zM15.52 9a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5zM19.52 9a.5.5 0 0 0 0-1 .5.5 0 0 0-.5.5.5.5 0 0 0 .5.5zM4.5 19h-2a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM22.5 19h-2a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/></g></svg>',
+    svgUrl: '',
+    title: "Loveseat",
+  },
+  {
+    category: "per-item",
+    id: "couch",
+    price: 75,
+    quantity: 0,
+    selected: false,
+    svgString: '<svg xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 0 25 25"><g id="sofa"><path class="cls-1" d="M23 10h-.49a7 7 0 0 0-7-6.5h-6a7 7 0 0 0-7 6.5H2a1 1 0 0 0-1 1v8.5a.5.5 0 0 0 .5.5H2v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V20h13v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V20h.5a.5.5 0 0 0 .5-.5V11a1 1 0 0 0-1-1zM9.49 4.5h6a6 6 0 0 1 6 5.5H20a1 1 0 0 0-1 1v4H6v-4a1 1 0 0 0-1-1H3.52a6 6 0 0 1 5.97-5.5zM5 21H3v-1h2zm17 0h-2v-1h2zm.5-2H2v-8h3v4a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-4h3v8z"/><path class="cls-1" d="M8.52 9a.5.5 0 0 0 0-1 .49.49 0 0 0-.52.5.5.5 0 0 0 .52.5zM12.52 9a.5.5 0 0 0 0-1 .49.49 0 0 0-.49.5.5.5 0 0 0 .49.5zM16.52 9a.5.5 0 0 0 0-1 .49.49 0 0 0-.49.5.5.5 0 0 0 .49.5zM8.52 12a.5.5 0 0 0 0-1 .49.49 0 0 0-.49.5.5.5 0 0 0 .49.5zM12.52 12a.5.5 0 0 0 0-1 .49.49 0 0 0-.49.5.5.5 0 0 0 .49.5zM16.52 12a.5.5 0 0 0 0-1 .49.49 0 0 0-.49.5.5.5 0 0 0 .49.5z"/></g></svg>',
+    svgUrl: '',
+    title: "Couch",
+  },
+  {
+    category: "per-item",
+    id: "desk",
+    price: 50,
+    quantity: 0,
+    selected: false,
+    svgString: '<svg xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 0 25 25"><path d="M23 14.49V11.5a.5.5 0 0 0-.5-.5h-2.77a3.26 3.26 0 0 1-.59-1h3.36a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h3.36a3.26 3.26 0 0 1-.59 1H8V7.5a.5.5 0 0 0-.5-.5H6v-.5a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5V11h-.5a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 1 0V23h6.5a.5.5 0 0 0 .5-.5V15h12v8.5a.5.5 0 0 0 1 0v-9.01zM22 3v4h-9V3zm-9 5h9v1h-9zm3.89 2h1.22a4.34 4.34 0 0 0 .39 1h-2a4.34 4.34 0 0 0 .39-1zM7 8v3H6V8zM4 7h1v4H4zm5 11H3v-3h6zm-6 4v-3h6v3zm0-8v-2h19v2z"/></svg>',
+    svgUrl: '',
+    title: "Desk",
+  },
+  {
+    category: "per-item",
+    id: "table",
+    price: 50,
+    quantity: 0,
+    selected: false,
+    svgString: '<svg xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 0 25 25"><path d="M22 4H3a2 2 0 0 0 0 4v13.5a.5.5 0 0 0 .5.5h1a.51.51 0 0 0 .5-.43L6.65 10h11.7L20 21.57a.51.51 0 0 0 .5.43h1a.5.5 0 0 0 .5-.5V8a2 2 0 0 0 0-4zM4.07 21H4V8h1.92zM6.79 9l.14-1h11.14l.14 1zM21 21h-.07L19.08 8H21zm1-14H3a1 1 0 0 1 0-2h19a1 1 0 0 1 0 2z" style="fill:#231f20"/></svg>',
+    svgUrl: '',
+    title: "Table",
+  },
 ];
 
 export default serviceTypes;

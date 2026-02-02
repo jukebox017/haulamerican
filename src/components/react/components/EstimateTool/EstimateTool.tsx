@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { get, useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 import './EstimateTool.css';
 import { useState } from 'react';
@@ -20,6 +20,7 @@ interface Inputs {
 
 export default function EstimateTool() {
   const {
+    getValues,
     register,
     handleSubmit,
     formState: { errors },
@@ -120,6 +121,17 @@ export default function EstimateTool() {
 
   const [estimate, setEstimate] = useState(0);
 
+  const serviceTypesToString = () => {
+    let serviceString = serviceTypes.filter((serviceType) => {
+      return serviceType.selected;
+    }).map((serviceType) => {
+      return `${serviceType.title} x ${serviceType.quantity}`
+    })
+    .join(',');
+
+    return serviceString;
+  }
+
   return (
     <div id="estimate-container">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -150,7 +162,7 @@ export default function EstimateTool() {
             className={`general-button ${fiveOrLess === 'true' ? 'selected' : ''}`}
             onClick={() => updateFiveOrLess('true')}
           >
-            <span>I have 5 items or less</span>
+            <span>I have a few items to haul</span>
           </button>
 
           <button
@@ -158,7 +170,7 @@ export default function EstimateTool() {
             className={`general-button ${fiveOrLess === 'false' ? 'selected' : ''}`}
             onClick={() => updateFiveOrLess('false')}
           >
-            <span>I have more than 5 items</span>
+            <span>Estimate based on trailer usage</span>
           </button>
         </div>
 
@@ -221,7 +233,24 @@ export default function EstimateTool() {
         <div id="estimate">
           <h2>Your Estimate:</h2>
           <h1>${estimate}</h1>
-          <input type="submit" value="Lock in your estimate!" />
+
+          { /*
+          <input
+            type="submit"
+            value="Submit your estimate!"
+            onClick={() => console.log('hey')}
+          />
+          */ }
+
+          <a href={`mailto:garrett@haulamerican.us?subject=New Estimate by Haul American&body=I've created a new estimate at haulamerican.us. Here is the information I've provided: %0D%0A
+            Zip: ${getValues('zipCode')} %0D%0A
+            First Name: ${getValues('firstName')} %0D%0A
+            Last Name: ${getValues('lastName')} %0D%0A
+            Email: ${getValues('email')} %0D%0A
+            Phone: ${getValues('phone')} %0D%0A
+            Services: ${serviceTypesToString()} %0D%0A
+            Estimated Total: $${estimate} `}>Submit Your Estimate!
+          </a>
         </div>
       )}
     </div>
