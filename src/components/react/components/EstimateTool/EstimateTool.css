@@ -1,0 +1,161 @@
+#estimate-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  /* Mobile */
+  @media screen and (width <= 740px) {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 730px;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      height: 40px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 0 12px;
+
+      &[type=radio] {
+        height: initial;
+        margin-bottom: 0;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (width <= 740px) {
+      width: 100%;
+
+    }
+  }
+
+  #estimate {
+    text-align: center;
+    align-content: center;
+
+    a {
+      font-size: 150%;
+    }
+  }
+
+  .general-button {
+    cursor: pointer;
+    border-radius: 15px;
+    border: 3px solid #163c91;
+    color: #163c91;
+    padding: 10px;
+    width: 360px;
+    height: 190px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+
+    &.selected {
+      border-color: white;
+      background: #163c91;
+      color: white;
+    }
+  }
+
+  .fiveOrLess {
+    display: grid;
+    grid: auto-flow / 375px 205px 2fr;
+    margin: 30px 0;
+
+    button {
+      width: 360px;
+    }
+
+    @media screen and (width <= 740px) {
+      display: flex;
+      flex-direction: column;
+      grid: unset;
+
+      button {
+        align-self: center;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .service-types-instructions {
+    text-align: center;
+  }
+
+  .service-types {
+    display: grid;
+    grid: auto-flow / 360px 1fr;
+    grid-gap: 10px;
+
+    /* Mobile */
+    @media screen and (width <= 740px) {
+      display: flex;
+      flex-direction: column;
+      grid: unset;
+      text-align: center;
+    }
+  }
+
+  .service-type {
+    img {
+      margin-top: 5px;
+
+      &.selected {
+        filter: invert();
+      }
+    }
+
+    .title {
+      vertical-align: super;
+    }
+
+    .description {
+      font-weight: initial;
+    }
+
+    .quantity-controls {
+      display: flex;
+      justify-content: space-around;
+      background: #163c91;
+      color: white;
+      margin-top: 10px;
+      font-size: 200%;
+      font-weight: bold;
+
+      .control {
+        width: 40px;
+        font-size: inherit;
+        font-weight: inherit;
+        background: inherit;
+        color: inherit;
+        border: none;
+        cursor: pointer;;
+
+        &.disabled {
+          color: #777;
+        }
+      }
+    }
+  }
+
+  .contact-consent {
+    margin-top: 40px;
+
+    input {
+      margin-right: 5px;
+      height: unset;
+    }
+
+    font-weight: bolder;
+  }
+}
