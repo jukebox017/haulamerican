@@ -68,6 +68,10 @@
     /* Mobile */
     @media screen and (width <= 740px) {
       width: 260px;
+
+      .description {
+        font-size: 75% !important;
+      }
     }
   }
 
