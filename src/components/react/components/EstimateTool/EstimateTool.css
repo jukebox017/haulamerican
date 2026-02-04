@@ -156,19 +156,27 @@
     }
   }
 
-  .contact-consent {
+  .acknowledgements {
     margin-top: 40px;
 
-    input {
-      -ms-transform: scale(1.75);
-      -moz-transform: scale(1.75);
-      -webkit-transform: scale(1.75);
-      -o-transform: scale(1.75);
-      transform: scale(1.75);
-      height: unset;
-      margin: 0 10px 0 0;
-    }
+    .estimate-checkbox {
+      font-weight: bolder;
+      margin-bottom: 20px;
 
-    font-weight: bolder;
+      input {
+        -ms-transform: scale(1.75);
+        -moz-transform: scale(1.75);
+        -webkit-transform: scale(1.75);
+        -o-transform: scale(1.75);
+        transform: scale(1.75);
+        height: unset;
+        margin: 0 10px 0 0;
+      }
+
+      label {
+        display: inline-block;
+        margin-left: 40px;
+      }
+    }
   }
 }

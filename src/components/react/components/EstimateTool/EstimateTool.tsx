@@ -16,6 +16,7 @@ interface Inputs {
   email: string;
   phone: string;
   contactConsent: boolean;
+  estimateAck: boolean;
 }
 
 export default function EstimateTool() {
@@ -29,6 +30,7 @@ export default function EstimateTool() {
 
   const zipCode = watch("zipCode");
   const contactConsent = watch("contactConsent");
+  const estimateAck = watch("estimateAck");
 
   const [fiveOrLess, setFiveOrLess] = useState('');
   const updateFiveOrLess = (fiveOrLess: string) => {
@@ -221,9 +223,16 @@ export default function EstimateTool() {
             }
           </div>
 
-          <div className="contact-consent">
-            <input type="checkbox" {...register("contactConsent")} />
-            <label>I consent to being contacted for service by Haul American.</label>
+          <div className="acknowledgements">
+            <div className="contact-consent estimate-checkbox">
+              <input type="checkbox" {...register("contactConsent")} />
+              <label>I consent to being contacted for service by Haul American.</label>
+            </div>
+
+            <div className="estimate-ack estimate-checkbox">
+              <input type="checkbox" {...register("estimateAck")} />
+              <label>I understand that this only an estimate and is subject to change.</label>
+            </div>
           </div>
         </>
         )}
@@ -234,16 +243,16 @@ export default function EstimateTool() {
           <h2>Your Estimate:</h2>
           <h1>${estimate}</h1>
 
-          { contactConsent && (
+          { contactConsent && estimateAck && (
           <a
-            href={`mailto:garrett@haulamerican.us?subject=New Estimate by Haul American&body=I've created a new estimate at haulamerican.us. Here is the information I've provided: %0D%0A%0D%0A
+            href={`mailto:garrett@haulamerican.us?subject=New Estimate by Haul American&body=I've created a new estimate at haulamerican.us. I've provided the following information: %0D%0A%0D%0A
             Zip: ${getValues('zipCode')} %0D%0A
             First Name: ${getValues('firstName')} %0D%0A
             Last Name: ${getValues('lastName')} %0D%0A
             Email: ${getValues('email')} %0D%0A
             Phone: ${getValues('phone')} %0D%0A
             Services: ${serviceTypesToString()} %0D%0A
-            Estimated Total: $${estimate} `}>Submit Your Estimate!
+            Estimated Total: $${estimate} %0D%0A%0D%0A*This is only an estimate and is subject to change.`}>Submit Your Estimate!
           </a>
           )}
         </div>
